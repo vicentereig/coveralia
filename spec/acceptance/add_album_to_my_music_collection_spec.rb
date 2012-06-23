@@ -1,13 +1,13 @@
 require 'acceptance/acceptance_helper'
 
-feature 'Add album to my music collection', %q{
-  In order to ...
-  As a ...
-  I want ...
-} do
+feature 'Add album to my music collection' do
 
-  scenario 'first scenario' do
-    true.should == true
+  background do
+    @user = Factorygirl.create(:user)
+  end
+
+  scenario 'Add Elvis Perkins In Dearland to my Music Collection' do
+
   end
 
 end
