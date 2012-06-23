@@ -2,7 +2,9 @@ class AlbumOwnershipsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @album_ownerships = current_user.album_ownerships
+    query = (params[:q] || {}).dup
+    @q    = current_user.album_ownerships.search(query)
+    @album_ownerships = @q.result distinct: true
   end
 
   def new

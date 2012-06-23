@@ -1,6 +1,13 @@
 %h1 AlbumOwnerships#index
 %a{href: new_album_ownership_url} Add An Album
 
+= search_form_for @q do |f|
+  = f.label :album_artist_cont
+  = f.text_field :album_artist_cont
+  = f.label :album_title_cont
+  = f.text_field :album_title_cont
+  = f.submit
+
 %table
   %thead
     %tr

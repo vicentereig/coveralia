@@ -7,7 +7,9 @@ FactoryGirl.define do
 
     factory :user_with_album_ownerships do
       after(:create) do |user|
-        user.album_ownerships << create(:hoss)
+        [:artificial_heart, :hoss, :mumford, :mogwai_hawk, :mogwai_earth].each { |album_key|
+          user.album_ownerships << create(album_key)
+        }
       end
     end
   end

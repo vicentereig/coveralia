@@ -10,6 +10,7 @@ gem 'pg'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'ransack'
 
 gem 'haml-rails'
 gem 'strong_parameters'
