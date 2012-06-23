@@ -1,0 +1,9 @@
+%h1 Add an Album to Your Collection
+
+= form_for @album_ownership do |ownership_form|
+  = ownership_form.fields_for :album do |album_form|
+    = album_form.label :title
+    = album_form.text_field :title
+    = album_form.label :artist
+    = album_form.text_field :artist
+  = ownership_form.submit 'Add to your collection'

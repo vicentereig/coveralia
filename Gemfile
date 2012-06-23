@@ -9,6 +9,7 @@ gem 'pg'
 
 gem 'devise'
 gem 'haml-rails'
+gem 'strong_parameters'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -23,8 +24,10 @@ end
 
 gem 'jquery-rails'
 
+
 group :development do
   gem 'powder'
+  gem 'quiet_assets'
 end
 
 group :test, :development do

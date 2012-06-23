@@ -1,11 +1,5 @@
 Coveralia::Application.routes.draw do
-  get "album_ownerships/index"
-
-  get "album_ownerships/create"
-
-  get "album_ownerships/show"
-
-  get "album_ownerships/update"
+  resource :album_ownerships
 
   devise_for :users
 
