@@ -6,7 +6,7 @@ feature 'Add album to my music collection' do
     @user = create(:user)
   end
 
-  scenario 'Add Elvis Perkins In Dearland to my Music Collection' do
+  scenario 'Add Stealers Wheel to my Music Collection' do
     sign_in @user
     click_link 'Add An Album'
 

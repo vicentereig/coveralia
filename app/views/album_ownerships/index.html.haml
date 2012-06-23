@@ -1,3 +1,21 @@
 %h1 AlbumOwnerships#index
-%a{href: new_album_ownerships_url} Add An Album
-%p Find me in app/views/album_ownerships/index.html.haml
+%a{href: new_album_ownership_url} Add An Album
+
+%table
+  %thead
+    %tr
+      %th Cover
+      %th Artist
+      %th Title
+  %tbody
+    - @album_ownerships.each do |album|
+      %tr
+        %td
+          - if album.cover_present?
+            %img{src: album.cover.image.thumb.url}/
+          - else
+            %a{id: "album_#{album.id}", href: new_album_ownership_cover_url(album.id)} Add A Cover
+        %td= album.artist
+        %td= album.title
+
+

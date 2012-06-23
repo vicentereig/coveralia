@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120623130740) do
+ActiveRecord::Schema.define(:version => 20120623150045) do
 
   create_table "album_ownerships", :force => true do |t|
     t.integer  "user_id"
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(:version => 20120623130740) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "covers", :force => true do |t|
+    t.integer  "album_ownership_id"
+    t.string   "image"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "covers", ["album_ownership_id"], :name => "index_covers_on_album_ownership_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

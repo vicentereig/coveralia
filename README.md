@@ -1,1 +1,14 @@
-Just a sample 3.2.6 project to give a try to Steak, RSpec, and Factory Girl together.
+Just a sample Rails 3.2.6 app to give a shot to Steak, RSpec, and Factory Girl together.
+
+    +----------------------+-------+-------+---------+---------+-----+-------+
+    | Name                 | Lines |   LOC | Classes | Methods | M/C | LOC/M |
+    +----------------------+-------+-------+---------+---------+-----+-------+
+    | Controllers          |    54 |    45 |       3 |      10 |   3 |     2 |
+    | Helpers              |     4 |     4 |       0 |       0 |   0 |     0 |
+    | Models               |    39 |    28 |       4 |       0 |   0 |     0 |
+    | Libraries            |     0 |     0 |       0 |       0 |   0 |     0 |
+    | Acceptance specs     |   108 |    84 |       0 |       4 |   0 |    19 |
+    +----------------------+-------+-------+---------+---------+-----+-------+
+    | Total                |   205 |   161 |       7 |      14 |   2 |     9 |
+    +----------------------+-------+-------+---------+---------+-----+-------+
+      Code LOC: 77     Test LOC: 84     Code to Test Ratio: 1:1.1

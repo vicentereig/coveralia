@@ -2,6 +2,7 @@ class AlbumOwnershipsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @album_ownerships = current_user.album_ownerships
   end
 
   def new
@@ -10,7 +11,6 @@ class AlbumOwnershipsController < ApplicationController
   end
 
   def create
-    puts album_ownership_params
     @album_ownership = current_user.album_ownerships_create(album_ownership_params[:album_ownership])
     flash[:notice]   = "#{@album_ownership.artist} - #{@album_ownership.title} was successfully added."
     redirect_to album_ownerships_url
@@ -24,6 +24,6 @@ class AlbumOwnershipsController < ApplicationController
 
 protected
   def album_ownership_params
-    params.permit(album_ownership: {album_attributes: [:title, :artist]})
+    params.permit(album_ownership: {album_attributes: [:title, :artist, :covers]})
   end
 end

@@ -1,0 +1,6 @@
+%h1 Adding a Cover to #{@album_ownership.artist} - #{@album_ownership.title}
+
+= form_for [@album_ownership, @cover],  html: {multipart: true} do |cover_form|
+  = cover_form.label      :image
+  = cover_form.file_field :image
+  = cover_form.submit 'Upload the cover'
