@@ -1,5 +1,5 @@
 Coveralia::Application.routes.draw do
-  resources :album_ownerships, except: [:show, :delete] do
+  resources :album_ownerships, except: [:show, :delete, :update] do
     resources :covers, only: [:new, :create]
   end
 

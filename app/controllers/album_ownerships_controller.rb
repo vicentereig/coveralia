@@ -18,12 +18,6 @@ class AlbumOwnershipsController < ApplicationController
     redirect_to album_ownerships_url
   end
 
-  def show
-  end
-
-  def update
-  end
-
 protected
   def album_ownership_params
     params.permit(album_ownership: {album_attributes: [:title, :artist, :covers]})
