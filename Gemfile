@@ -23,7 +23,12 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'powder'
+end
+
 group :test, :development do
+  gem 'debugger'
   gem 'rspec-rails'
   gem 'steak'
   gem 'factory_girl_rails'
